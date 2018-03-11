@@ -28,8 +28,9 @@ issue500demo_api_1|    at ServerResponse.onevent (/usr/src/app/node_modules/ee-f
 issue500demo_api_1|    at emitNone (events.js:111:20)
 issue500demo_api_1|    at ServerResponse.emit (events.js:208:7)
 issue500demo_api_1|[nodemon] app crashed - waiting for file changes before starting...
-
-
 ```
+
+# Important #
+Also no issue on node v6.* (see branch: `no-issue-node6`)
 
 You can also see logs in separate tab using `bash dev.logs.sh`
