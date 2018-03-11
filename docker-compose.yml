@@ -1,0 +1,16 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:9.4-alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./dockerfiles/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    env_file: "${ENV_FILE}"
+    environment:
+      - POSTGRES_DB=${APP_DB_NAME}
+      - POSTGRES_USER=${APP_DB_USERNAME}
+      - POSTGRES_PASSWORD=${APP_DB_PASSWORD}
+
+volumes:
+  postgres-data:
+    driver: local

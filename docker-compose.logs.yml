@@ -1,0 +1,18 @@
+  version: '2'
+
+  services:
+    logspout:
+      image: gliderlabs/logspout
+      command: 'syslog://logstash:5000'
+      volumes:
+        - '/var/run/docker.sock:/tmp/docker.sock'
+      ports:
+        - "8000:80"
+      links:
+        - logstash
+
+    logstash:
+      build:
+        context: ./dockerfiles/logstash
+      environment:
+        - LOGSPOUT=ignore

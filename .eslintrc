@@ -1,0 +1,37 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "TEST": true,
+    "PRODUCTION": true,
+    "browser": true,
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "location": true
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules":{
+    "react/jsx-no-bind": [2, {
+      "ignoreRefs": true,
+      "allowArrowFunctions": false,
+      "allowBind": false
+    }],
+    "arrow-body-style": [2, "as-needed"],
+    "no-underscore-dangle": [0],
+    "import/extensions": [0],
+    "react/forbid-prop-types": [0],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.test.jsx"]}],
+    "class-methods-use-this": [0],
+    "no-bitwise": ["error", { "allow": ["~"] }],
+    "import/prefer-default-export": [0],
+    "jsx-a11y/no-static-element-interactions": [0],
+    "import/no-named-as-default": [0],
+    "jsx-a11y/label-has-for": [0],
+    "jsx-a11y/anchor-has-content": [0],
+    "no-plusplus": [0],
+    "no-return-assign": ["error", "except-parens"]
+  }
+}

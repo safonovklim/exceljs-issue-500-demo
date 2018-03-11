@@ -1,0 +1,52 @@
+{
+  "name": "issue500demo",
+  "version": "0.0.1",
+  "description": "Issue 500 Demo App",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -p \"{command}\" -l 13 \"npm run server\"",
+    "server": "NODE_ENV=production node build/server/server.js",
+    "db:schema": "babel-node ./scripts/run-db-schema.js",
+    "db:data": "babel-node ./scripts/run-db-data.js",
+    "db:seed": "npm run db:schema && npm run db:data",
+    "watch:server": "NODE_ENV=development nodemon server/server --exec babel-node"
+  },
+  "keywords": [
+    "issue500demo"
+  ],
+  "author": "safonovklim@issue500demo",
+  "license": "ISC",
+  "homepage": "https://github.com/safonovklim/exceljs-issue-500-demo",
+  "dependencies": {
+    "babel-cli": "6.18.0",
+    "babel-core": "6.18.2",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "6.2.8",
+    "babel-plugin-react-intl": "2.2.0",
+    "babel-plugin-transform-async-to-generator": "6.22.0",
+    "babel-plugin-transform-builtin-extend": "1.1.0",
+    "babel-plugin-transform-runtime": "6.15.0",
+    "babel-polyfill": "6.16.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-stage-0": "6.16.0",
+    "concurrently": "^3.5.1",
+    "dotenv": "4.0.0",
+    "exceljs": "0.8.1",
+    "fast-csv": "2.4.1",
+    "jscrollpane": "2.0.22",
+    "json-loader": "0.5.4",
+    "koa": "1.2.4",
+    "koa-body": "1.5.0",
+    "koa-router": "5.4.0",
+    "lodash": "4.17.2",
+    "moment": "2.20.1",
+    "moment-timezone": "0.5.10",
+    "nodemon": "^1.17.1",
+    "pg": "6.1.0",
+    "pg-query-stream": "1.1.1",
+    "request": "2.79.0",
+    "request-ip": "1.2.3",
+    "sequelize": "3.27.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "public",
+    "node_modules/",
+    "typings",
+    "coverage",
+    "*.test.js"
+  ],
+  "verbose": true,
+  "execMap": {
+    "js": "node"
+  },
+  "watch": [
+    "server/",
+    "config"
+  ],
+  "env": {
+    "BLUEBIRD_DEBUG": 0
+  },
+  "ext": "js json"
+}

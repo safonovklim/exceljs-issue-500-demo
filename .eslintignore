@@ -1,0 +1,10 @@
+.git
+coverage
+node_modules
+cache
+data
+deploy
+design
+dockerfiles
+public
+build
