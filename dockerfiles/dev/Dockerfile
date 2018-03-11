@@ -1,4 +1,4 @@
-FROM node:8.9.4
+FROM node:6.13.1
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python make g++ libldap2-dev postgresql
